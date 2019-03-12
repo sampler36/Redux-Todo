@@ -2,7 +2,7 @@
   text-align: center;
 }
 .App-header {
-  background-color: #282c34;
+  background-color: #219dfc;;
   min-height: 10vh;
   display: flex;
   flex-direction: column;
@@ -15,19 +15,7 @@
 .center{
   text-align: start;
   color: #219dfc;
+  background-color: #219dfc46;
   border :2px solid ;
-  margin: 10px 20px 0px;
   padding: 20px;
-}
-
-.container{
- 
-    margin-right: auto; /* 1 */
-    margin-left:  auto; /* 1 */
-  
-    max-width: 960px; /* 2 */
-  
-    padding-right: 10px; /* 3 */
-    padding-left:  10px; /* 3 */
-  
 }

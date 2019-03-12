@@ -6,12 +6,16 @@ import TodoForm from './components/TodoForm'
 class App extends Component {
   state = {
     // dummy data with items
-      todos: [
-        {id: 1, content: 'finish lambda lecturers'},
-        {id: 2, content: 'pick kids from practise'},
-        {id: 3, content: 'do a stand up'}
-      ]
+      todos: [ ]
   }
+  addTodo = (todo) => {
+    todo.id = Math.random()
+    let todos = [...this.state.todos, todo];
+    this.setState({
+      todos
+    })
+     }
+
   deleteTodo = (id) => {
     const todos = this.state.todos.filter(todo => {
       return todo.id !== id
@@ -20,16 +24,10 @@ class App extends Component {
       todos
     })
   }
-  addTodo = (todo) => {
- todo.id = Math.random()
- let todos = [...this.state.todos, todo];
- this.setState({
-   todos
- })
-  }
+
   render() {
     return (
-      <div className="App container">
+      <div className="app container">
         <header className="App-header">
         <p>Todo Tasks</p>
         </header>
